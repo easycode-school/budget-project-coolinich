@@ -1,0 +1,34 @@
+<app-add-form (newRecord)='onNewTaskSubmitHandler($event)'></app-add-form>
+
+<div class="container clearfix">
+    <div class="income">
+        <h2 class="icome__title">Income</h2>
+        <div class="income__list">
+            <div class="item clearfix" id="income-0" *ngFor="let record of storage.current_list_income">
+                <div class="item__description">{{record.description}}</div>
+                <div class="right clearfix">
+                    <div class="item__value">+ {{record.value}}</div>
+                    <!-- <div class="item__delete">
+                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="expenses">
+        <h2 class="expenses__title">Expenses</h2>
+        <div class="expenses__list">
+            <div class="item clearfix" id="expense-0"  *ngFor="let record of storage.current_list_expense">
+                <div class="item__description">{{record.description}}</div>
+                <div class="right clearfix">
+                    <div class="item__value">- {{record.value}}</div>
+                    <!-- <div class="item__percentage">21%</div> -->
+                    <!-- <div class="item__delete">
+                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

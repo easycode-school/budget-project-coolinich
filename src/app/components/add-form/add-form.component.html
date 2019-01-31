@@ -1,0 +1,13 @@
+<div class="add">
+    <div class="add__container">
+        <form (ngSubmit)="onSubmitHandler()" #addItemForm="ngForm">
+            <select class="add__type" #add__type="ngModel" [(ngModel)]="newRecordItem.type" name="type">
+                <option value="income" selected>+</option>
+                <option value="expense">-</option>
+            </select>
+            <input type="text" class="add__description" placeholder="Add description" #add__description="ngModel" [(ngModel)]="newRecordItem.description" name="description">
+            <input type="number" min="0.01" step= ".01" class="add__value" placeholder="Value" #add__value="ngModel" [(ngModel)]="newRecordItem.value" name="value">
+            <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+        </form>
+    </div>
+</div>
